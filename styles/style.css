@@ -1,0 +1,107 @@
+/* @import url('./header.css'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+  --darkBrown: #967e76;
+  --lightBrown: #d7c0ae;
+  --beige: #eee3cb;
+  --gray: #b7c4cf;
+  --darkerBrown: #7f6b65;
+}
+
+* {
+  margin: 0; /* This makes the css fill the entire page */
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+body {
+  background: var(--beige);
+  font-family: 'Poppins';
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  padding: 30px;
+  text-align: left;
+  background: var(--darkBrown);
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Poppins';
+}
+
+#header__links {
+  display: inline-block;
+  /* transition: 1s; */
+  margin-right: 50px; /* add spacing between items */
+}
+
+#header__links:hover {
+  /* font-size: 35px; */
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.greet,
+.bio {
+  position: relative;
+  top: 3em;
+  left: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  gap: 25px;
+  padding: 25px;
+  text-align: justify;
+  /* background-color: aqua; */
+  font-size: 1.2em;
+  margin-bottom: 50em;
+}
+
+.greet .intro .intro__greet,
+.bio .bio__heading {
+  text-align: center;
+  font-weight: 700;
+}
+
+.greet .socials button {
+  padding: 0.7em 1.2em;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--darkBrown);
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.greet .socials button:hover {
+  background-color: var(--darkerBrown);
+}
+
+.greet .socials button:active {
+  transform: scale(0.95);
+}
+
+#socials__instagram {
+  margin-right: 1.2em;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s, filter 0.4s;
+  filter: blur(0.2em);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
